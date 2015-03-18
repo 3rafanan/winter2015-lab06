@@ -4,7 +4,7 @@ Order placement data for Barker Bob's Burger Bar's Bigger, Better Burger Bonanza
 -->
 
 <!-- An order identifies the customer, order type, burgers, adn anything special  -->
-<!ELEMENT order (customer, order_type, burgers, special)>
+<!ELEMENT order (customer, delivery?, burger+, special?)>
 
 <!-- A customer is identified simple by their name -->
 <!ELEMENT customer (#PCDATA)>
@@ -20,10 +20,7 @@ Order placement data for Barker Bob's Burger Bar's Bigger, Better Burger Bonanza
 <!-- Let's provide for any special instructions -->
 <!ELEMENT special (#PCDATA)>
 
-<!-- The burgers will be specified individually -->
-<!ELEMENT special (#PCDATA)>
-
-<!-- The burger will be specified individually
+<!-- The burgers will be specified individually
 Burger customization...
 - 1 of 5 patty types
 - up to two cheeses
